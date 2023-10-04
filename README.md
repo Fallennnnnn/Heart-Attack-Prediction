@@ -7,9 +7,8 @@ Penyakit jantung, khususnya serangan jantung, merupakan salah satu masalah keseh
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Pencegahan: Mengidentifikasi individu yang berisiko tinggi serangan jantung dapat memungkinkan upaya pencegahan yang lebih efektif. Ini termasuk perubahan gaya hidup, pengawasan medis lebih ketat, dan penggunaan obat-obatan yang sesuai.
 - Sumber Daya Kesehatan: Dalam sistem perawatan kesehatan yang terbatas, memprioritaskan pasien yang berisiko tinggi dapat membantu alokasi sumber daya medis dengan lebih efisien.
+  *Referensi*
 - [World Health Organization (WHO) - Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases)
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
 
 ## Business Understanding
 
