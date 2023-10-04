@@ -7,30 +7,23 @@ Penyakit jantung, khususnya serangan jantung, merupakan salah satu masalah keseh
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Pencegahan: Mengidentifikasi individu yang berisiko tinggi serangan jantung dapat memungkinkan upaya pencegahan yang lebih efektif. Ini termasuk perubahan gaya hidup, pengawasan medis lebih ketat, dan penggunaan obat-obatan yang sesuai.
 - Sumber Daya Kesehatan: Dalam sistem perawatan kesehatan yang terbatas, memprioritaskan pasien yang berisiko tinggi dapat membantu alokasi sumber daya medis dengan lebih efisien.
+
 **Referensi**
 - [World Health Organization (WHO) - Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases)
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
 
 Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Salah satu masalah yang dihadapi adalah ketidakpastian dalam menentukan faktor-faktor yang paling berkontribusi terhadap risiko serangan jantung. Beberapa faktor seperti riwayat keluarga, gaya hidup, dan aspek medis seringkali kompleks dan beragam. Ini menyulitkan dalam identifikasi yang cepat dan akurat terhadap individu yang berisiko tinggi serangan jantung.
+- Meskipun ada pedoman umum untuk mengidentifikasi risiko serangan jantung, model prediktif yang lebih presisi masih dibutuhkan. Kehadiran faktor-faktor tertentu dapat memiliki dampak yang berbeda pada risiko serangan jantung pada individu tertentu
 
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+- Tujuan dari pernyataan masalah pertama adalah mengembangkan model prediksi risiko serangan jantung yang dapat mengidentifikasi individu yang berisiko tinggi berdasarkan beragam faktor kesehatan dan gaya hidup. Model ini akan membantu tenaga medis dan pasien dalam upaya pencegahan dan pengelolaan risiko serangan jantung.
+- Tujuan dari pernyataan masalah kedua adalah meningkatkan akurasi model prediksi risiko serangan jantung dengan mempertimbangkan dampak faktor-faktor yang berbeda pada risiko individu. Ini akan memungkinkan kita untuk memberikan peringatan lebih dini dan solusi yang lebih tepat dalam pencegahan serangan jantung.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
