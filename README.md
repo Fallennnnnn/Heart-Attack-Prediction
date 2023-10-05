@@ -17,12 +17,6 @@ Proyek ini bertujuan untuk memprediksi risiko serangan jantung berdasarkan data 
 
 Penelitian menunjukkan bahwa model prediksi serangan jantung yang akurat dapat membantu dokter untuk mengidentifikasi individu yang berisiko tinggi dan memberikan intervensi yang tepat untuk mencegah serangan jantung. (Arora et al., 2022; Deng et al., 2022; Krishnan & Bhatt, 2022)
 
-**Referensi**
-- [World Health Organization (WHO) - Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases)
-- Arora, S., Kumar, A., & Garg, R. (2022, March 8). Risk factors for heart attack: A review. Journal of Cardiovascular Disease Research, 13(1), 1-10.
-- Deng, Y., Xu, J., Wang, Y., & Zhu, H. (2022, June 21). Risk factors for heart attack in China: A systematic review and meta-analysis. Journal of the American Heart Association,
-- Krishnan, S., & Bhatt, D. L. (2022, June 6). Risk factors for heart attack: A comprehensive review. Journal of the American College of Cardiology, 79(16), 2157-2172.
-
 ## Business Understanding
 
 Dalam bagian ini, akan dijelaskan potensi manfaat dari pencegahan serangan jantung dan bagaimana alokasi sumber daya kesehatan dapat menjadi lebih efisien. Penting untuk memahami dampak serangan jantung pada masyarakat dan sistem kesehatan. Beberapa aspek yang akan dibahas adalah:
@@ -41,7 +35,7 @@ Pemahaman bisnis ini menjadi dasar untuk mengembangkan solusi yang relevan dalam
 
 Dalam konteks masalah ini, dijelaskan lebih rinci mengenai ketidakpastian yang terkait dengan faktor-faktor risiko serangan jantung. Beberapa faktor ini seperti riwayat keluarga, gaya hidup, dan faktor medis dapat menjadi kompleks dan beragam. Ini menciptakan tantangan dalam mengidentifikasi individu yang berisiko tinggi terhadap serangan jantung. Berikut adalah penjelasan lebih lanjut:
 
-1. **Ketidakpastian dalam Identifikasi Risiko**: Bagaimana ketidakpastian dalam faktor-faktor risiko serangan jantung dapat memengaruhi kemampuan kita untuk mengidentifikasi individu yang berisiko tinggi? Misalnya, bagaimana jika seseorang memiliki riwayat keluarga yang kuat tetapi gaya hidup yang sehat?
+1. **Ketidakpastian dalam Identifikasi Risiko**: Bagaimana ketidakpastian dalam faktor-faktor risiko serangan jantung dapat memengaruhi kemampuan untuk mengidentifikasi individu yang berisiko tinggi? Misalnya, bagaimana jika seseorang memiliki riwayat keluarga yang kuat tetapi gaya hidup yang sehat?
 
 2. **Variabilitas Faktor Kesehatan dan Gaya Hidup**: Sebutkan contoh-contoh faktor kesehatan dan gaya hidup yang kompleks dan beragam yang dapat mempengaruhi risiko serangan jantung. Bagaimana cara memahami dampak faktor-faktor ini pada risiko serangan jantung pada individu tertentu?
 
@@ -128,7 +122,7 @@ Berikut ini adalah Visualisasi yang dilakukan untuk mendapatkan insight dari dat
    - Melakukan visualisasi untuk fitur-fitur utama yang relevan dengan risiko serangan jantung, seperti pendapatan, BMI, trigliserida, tingkat stres, aktivitas fisik, dan pola tidur.
 
 Berikut ini adalah hasil visualisasinya <br>
-  <img src="Images/distribution.png" alt="dist" width="auto" height="auto">
+  ![distribution](https://github.com/Fallennnnnn/Heart-Attack-Prediction/assets/84832657/86dce67b-4bce-46b6-ac62-149950046267)
 dapat disimpulkan bahwa **merokok, diabetes, dan konsumsi alkohol dalam jumlah berlebihan** adalah faktor risiko yang signifikan untuk serangan jantung.
 
 **Merokok** adalah faktor risiko yang paling signifikan, dengan **89,7%** dari orang-orang dalam dataset adalah perokok.
@@ -136,13 +130,14 @@ dapat disimpulkan bahwa **merokok, diabetes, dan konsumsi alkohol dalam jumlah b
 **Diabetes** juga merupakan faktor risiko yang signifikan, dengan **65,2%** dari orang-orang dalam dataset menderita diabetes.
 
 **Konsumsi alkohol** dalam jumlah sedang tidak dianggap sebagai faktor risiko untuk serangan jantung, tetapi konsumsi alkohol dalam jumlah berlebihan dapat meningkatkan risiko. <br>
-  <img src="Images/distribution2.png" alt="dist2" width="auto" height="auto">
+  ![distribution2](https://github.com/Fallennnnnn/Heart-Attack-Prediction/assets/84832657/8ec3ab3c-6f01-465c-9bf5-783a47595cdd)
+
 Dapat dilihat pada grafik diatas untuk persebaran ***Income***, **BMI**, **Triglycerides**, **Stress Level** untuk frekuensi yang berpotensi serangan jantung lebih sedikit daripada yang tidak berpotensi, semakin sedikit income peluang semakin besar karena faktor akses ke layanan kesehatan <br>
-  <img src="Images/distribution3.png" alt="dist3" width="auto" height="auto">
+  ![distribution3](https://github.com/Fallennnnnn/Heart-Attack-Prediction/assets/84832657/e64435ad-a893-462e-a899-f8740ad14c2a)
 Dapat dilihat pada grafik diatas untuk persebaran ***Physical Activity Days Per Week***, ***Sedentary Hours Per Day***, ***Exercise Hours Per Week*** untuk frekuensi hampir sama dan sama hampir sama rata <br>
-  <img src="Images/sex.png" alt="gender" width="auto" height="auto">
+ ![gender](https://github.com/Fallennnnnn/Heart-Attack-Prediction/assets/84832657/1eef27b0-6db7-4701-9f8d-dcc424793641)
 Dapat dilihat dari visualisasi bahwa persentasi pria lebih besar daripada perempuan dalam potensi penyakit serangan jantung ini <br>
-  <img src="Images/viz.png" alt="viz" width="auto" height="auto"> 
+![viz](https://github.com/Fallennnnnn/Heart-Attack-Prediction/assets/84832657/e3d7e86c-5f0e-4e34-9361-ca3158e08f07)
 Gambar tersebut menunjukkan empat grafik yang menggambarkan berbagai faktor risiko penyakit jantung. Grafik pertama menunjukkan distribusi usia, grafik kedua menunjukkan distribusi kadar kolesterol, grafik ketiga menunjukkan distribusi denyut jantung, dan grafik keempat menunjukkan distribusi jam tidur per hari. <br>
   
 Dengan melakukan eksplorasi data ini, tahap awal yang krusial telah diselesaikan untuk memahami karakteristik dataset dalam konteks risiko serangan jantung sebelum melangkah ke tahap pemodelan.
@@ -169,7 +164,20 @@ Dalam tahapan data preparation, telah dilakukan beberapa langkah penting untuk m
    - Proses _encoding_ adalah langkah yang penting untuk mengubah data kategorikal menjadi format yang dapat digunakan oleh model. Ini adalah pendekatan yang baik.
 
 7. **Pemisahan Data Train dan Test**:
-   - Pemisahan dataset menjadi data pelatihan dan pengujian adalah langkah yang esensial untuk menguji kinerja model. Pada proyek ini, data dibagi menjadi data pelatihan (80%) dan data pengujian (20%) dengan rasio yang telah ditentukan. Rasio pembagian dataset ini memungkinkan model untuk dilatih dengan sebagian data yang cukup besar dan diuji pada data yang tidak pernah dilihat sebelumnya, sehingga menghasilkan pengukuran performa yang obyektif.
+Proses pembagian dataset pada tahap data preparation adalah langkah penting dalam persiapan data untuk pemodelan. Hal ini melibatkan pembagian dataset menjadi dua bagian utama: data pelatihan (train set) dan data pengujian (test set). Rasio pembagian dataset ini memengaruhi bagaimana model akan dilatih dan diuji. Berikut penjelasan lebih detail tentang proses pembagian dataset dan rasio yang digunakan:
+
+ - **Proses Pembagian Dataset**:
+   - Dataset awal yang telah dihapus duplikat dan diolah dalam tahap sebelumnya akan dibagi menjadi dua bagian: data pelatihan dan data pengujian.
+   - Data pelatihan (train set) digunakan untuk melatih model. Model akan "mempelajari" pola dan hubungan dalam data ini.
+   - Data pengujian (test set) digunakan untuk menguji kinerja model yang telah dilatih. Data ini tidak digunakan selama proses pelatihan, sehingga model diuji pada data yang belum pernah dilihat sebelumnya.
+     
+ - **Rasio Pembagian Dataset**:
+   - Rasio pembagian dataset adalah perbandingan antara jumlah data pelatihan dan data pengujian. Rasio ini dapat bervariasi tergantung pada kasus dan preferensi, tetapi rasio yang umum digunakan adalah 80% data pelatihan dan 20% data pengujian.
+   - Dalam proyek ini, rasio 80:20 digunakan, yang berarti 80% dari dataset digunakan untuk melatih model dan 20% digunakan untuk menguji model. Rasio ini memberikan keseimbangan yang baik antara melatih model dengan cukup data dan menguji model pada data yang independen untuk mengukur kinerja yang sebenarnya.
+
+   Proses pembagian dataset ini penting untuk menghindari overfitting, yaitu ketika model terlalu "menghafal" data pelatihan dan tidak dapat menggeneralisasi dengan baik pada data baru. 
+   Dengan membagi dataset menjadi data pelatihan dan pengujian, kita dapat mengukur kinerja model secara lebih objektif dan memastikan bahwa model mampu menghasilkan prediksi yang baik 
+   pada data yang belum pernah dilihat sebelumnya.
 
 8. **Standardisasi Nilai Numerik**:
    - _Scaling_ atau standardisasi diperlukan untuk memastikan bahwa variabel numerik memiliki skala yang serupa. Ini mendukung algoritma yang sensitif terhadap skala seperti SVM atau_ K-Nearest Neighbors_.
@@ -206,7 +214,6 @@ Selama proses pemodelan,  dataset yang digunakan telah dilakukan _preprocessing_
 
 Hasil pemodelan menunjukkan bahwa model terbaik yang dipilih adalah **Logistic Regression** dengan akurasi 0.6418. Model ini dipilih karena mampu mengidentifikasi individu yang tidak memiliki risiko serangan jantung dengan cukup baik. Meskipun recall untuk kelas "Heart Attack" rendah, model ini masih memberikan hasil yang baik secara keseluruhan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
 **Kelebihan dan Kekurangan Algoritma:**
 
 1. **Random Forest Classifier**:
@@ -255,7 +262,7 @@ Hasil pemodelan menunjukkan bahwa model terbaik yang dipilih adalah **Logistic R
      - Memerlukan waktu komputasi yang tinggi untuk menghitung jarak antara titik data.
 
 **Pemilihan Model Terbaik:**
- <img src="Images/model.png" alt="model" width="auto" height="auto"> <br>
+![model](https://github.com/Fallennnnnn/Heart-Attack-Prediction/assets/84832657/eff7b22a-d426-4e0d-936a-856e747b4508) <br>
 Model terbaik, yaitu **Logistic Regression**, dipilih berdasarkan akurasi tertinggi (0.6418) dan precision yang tinggi untuk kelas mayoritas ("No Heart Attack"). Model ini dapat mengidentifikasi individu yang tidak memiliki risiko serangan jantung dengan sangat baik. Meskipun recall untuk kelas "Heart Attack" rendah, model ini masih memberikan hasil yang baik dalam hal akurasi dan precision secara keseluruhan.
 
 
@@ -288,4 +295,10 @@ Recall mengukur sejauh mana model dapat mengidentifikasi semua kasus positif yan
 $$\text{F1-Score} = 2 \cdot \frac{\text{Presisi} \cdot \text{Recall}}{\text{Presisi} + \text{Recall}}$$
 F1-Score adalah metrik yang menggabungkan presisi dan recall. Ini memberikan gambaran tentang keseimbangan antara akurasi model dalam mengidentifikasi kasus positif dan kemampuannya dalam menghindari kesalahan positif.
 
+**Referensi**
+- [World Health Organization (WHO) - Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases)
+- Arora, S., Kumar, A., & Garg, R. (2022, March 8). Risk factors for heart attack: A review. Journal of Cardiovascular Disease Research, 13(1), 1-10.
+- Deng, Y., Xu, J., Wang, Y., & Zhu, H. (2022, June 21). Risk factors for heart attack in China: A systematic review and meta-analysis. Journal of the American Heart Association,
+- Krishnan, S., & Bhatt, D. L. (2022, June 6). Risk factors for heart attack: A comprehensive review. Journal of the American College of Cardiology, 79(16), 2157-2172.
+  
 **---Ini adalah bagian akhir laporan---**
