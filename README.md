@@ -27,9 +27,9 @@ Menjelaskan tujuan dari pernyataan masalah:
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 
-    ### Solution statements
-    - Akan digunakan dua algoritma berbeda untuk mencapai solusi. Pertama, **Logistic Regression ** akan dipilih sebagai model baseline untuk melakukan klasifikasi risiko serangan jantung. Kemudian akan dicoba algoritma **Random              Forest Classifier** sebagai model kedua. Disini akan dilakukan evaluasi kinerja model dan memilih yang memberikan hasil terbaik berdasarkan metrik evaluasi seperti akurasi, presisi, dan recall.
-    - Akan dilakukan eksplorasi model lain yang cocok untuk permasalahan ini, seperti **Decsion Tree**, **Gradient Boosting**, dan **K-Nearest Neighbors (KNN)**.Setelah itu akan dievaluasi kinerja semua model yang diusulkan dan memilih        model yang paling sesuai.
+### Solution statements
+- Akan digunakan dua algoritma berbeda untuk mencapai solusi. Pertama, **Logistic Regression** akan dipilih sebagai model baseline untuk melakukan klasifikasi risiko serangan jantung. Kemudian akan dicoba algoritma **Random Forest Classifier** sebagai model kedua. Disini akan dilakukan evaluasi kinerja model dan memilih yang memberikan hasil terbaik berdasarkan metrik evaluasi seperti akurasi, presisi, dan recall.
+- Akan dilakukan eksplorasi model lain yang cocok untuk permasalahan ini, seperti **Decsion Tree**, **Gradient Boosting**, dan **K-Nearest Neighbors (KNN)**.Setelah itu akan dievaluasi kinerja semua model yang diusulkan dan memilih model yang paling sesuai.
 
 ## Data Understanding
 Dataset ini menyediakan berbagai fitur yang komprehensif tentang kesehatan jantung dan pilihan gaya hidup, mencakup detail spesifik pasien seperti usia, jenis kelamin, kadar kolesterol, tekanan darah, denyut jantung, dan indikator seperti diabetes, riwayat keluarga, kebiasaan merokok, obesitas, dan konsumsi alkohol. Selain itu, faktor gaya hidup seperti jam olahraga, kebiasaan makan, tingkat stres, dan jam sedentari juga termasuk. Aspek medis yang mencakup masalah jantung sebelumnya, penggunaan obat-obatan, dan kadar trigliserida juga dipertimbangkan. Aspek sosioekonomi seperti pendapatan dan atribut geografis seperti negara, benua, dan belahan bumi juga dimasukkan. Dataset ini, yang terdiri dari 8763 catatan dari pasien di seluruh dunia, diakhiri dengan fitur klasifikasi biner penting yang menunjukkan adanya atau tidak adanya risiko serangan jantung, menyediakan sumber daya komprehensif untuk analisis prediktif dan penelitian kesehatan kardiovaskular.
@@ -66,14 +66,71 @@ Sumber Dataset:
 - Heart Attack Risk - Presence of heart attack risk (1: Yes, 0: No)
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+Berikut ini adalah Visualisasi yang dilakukan untuk mendapatkan insight dari data yang telah diperoleh
 
+1. **Visualisasi Distribusi Jenis Kelamin (Sex)**:
+   - Dilakukan visualisasi untuk mengetahui bagaimana data terdistribusi berdasarkan jenis kelamin, memberikan pemahaman awal tentang perbandingan antara pria dan wanita dalam dataset.
+
+2. **Visualisasi Distribusi Usia (Age)**:
+   - Dilakukan visualisasi distribusi usia pasien dalam dataset untuk memahami karakteristik umur pasien yang relevan dengan risiko serangan jantung.
+
+3. **Visualisasi Kolesterol (Cholesterol)**:
+   - Dilakukan visualisasi kolesterol untuk melihat sebaran nilai kolesterol dalam dataset, yang berkaitan dengan risiko serangan jantung.
+
+4. **Visualisasi Heart Rate (Heart Rate)**:
+   - Visualisasi ini memberikan pemahaman tentang sebaran denyut jantung pasien dalam dataset dan potensial korelasinya dengan risiko serangan jantung.
+
+5. **Visualisasi Jam Tidur Per Hari (Sleep Hours Per Day) untuk Heart Attack Risk**:
+   - Melalui visualisasi jam tidur per hari, data dijelaskan dalam konteks risiko serangan jantung untuk mengevaluasi dampak pola tidur terhadap risiko.
+
+6. **Visualisasi Persentase Pasien Pengkonsumsi Alkohol, Perokok, Penderita Diabetes, Penderita Obesitas untuk Heart Attack**:
+   - Dilakukan Visualisasi Persentase Pasien Pengkonsumsi Alkohol, Perokok, Penderita Diabetes, Penderita Obesitas dalam konteks risiko serangan jantung.
+
+7. **Visualisasi Pendapatan (Income), BMI, Trigliserida, Tingkat Stres (Stress Level), Jumlah Hari Aktivitas Fisik (Physical Activity Days Per Week), Jam Tidur Per Hari (Sleep Hours Per Day), Jam Olahraga Per Minggu (Exercise Hours Per Week)**:
+   - Melakukan visualisasi untuk fitur-fitur utama yang relevan dengan risiko serangan jantung, seperti pendapatan, BMI, trigliserida, tingkat stres, aktivitas fisik, dan pola tidur.
+   - 
+Berikut ini adalah hasil visualisasinya <br>
+  <img src="Images/distribution.png" alt="dist" width="auto" height="auto">
+  <img src="Images/distribution2.png" alt="dist2" width="auto" height="auto">
+  <img src="Images/distribution3.png" alt="dist3" width="auto" height="auto">
+  <img src="Images/sex.png" alt="gender" width="auto" height="auto">
+  <img src="Images/viz.png" alt="viz" width="auto" height="auto"> <br>
+  
+Dengan melakukan eksplorasi data ini, tahap awal yang krusial telah diselesaikan untuk memahami karakteristik dataset dalam konteks risiko serangan jantung sebelum melangkah ke tahap pemodelan.
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
+Dalam tahapan data preparation, telah dilakukan beberapa langkah penting untuk memastikan data  siap untuk pemodelan. Berikut adalah penjelasan tentang proses data preparation yang dilakukan beserta alasan mengapa setiap tahapan diperlukan:
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+1. **Mengecek Data Kosong**:
+   - Proses: Memeriksa apakah ada nilai yang hilang atau kosong dalam dataset.
+   - Alasan: Ini penting karena nilai yang hilang dapat memengaruhi kualitas dan hasil pemodelan. Langkah ini membantu Anda memastikan bahwa dataset tidak memiliki kekurangan data yang signifikan.
+
+2. **Mengecek Duplikat Data**:
+   - Proses: Memeriksa duplikat data dalam dataset.
+   - Alasan: Duplikat data dapat mengganggu analisis dan pemodelan. Menghapus duplikat membantu memastikan setiap entri unik diwakili dengan benar.
+
+3. **Mengecek Korelasi**:
+   - Proses: Melakukan analisis korelasi antara fitur-fitur dalam dataset.
+   - Alasan: Memahami korelasi antar fitur membantu Anda mengidentifikasi hubungan yang mungkin ada di antara mereka. Ini penting untuk memilih fitur yang relevan dalam pemodelan dan menghindari multicollinearity.
+
+4. **Menghapus Kolom Tidak Diperlukan**:
+   - Proses: Menghapus kolom yang dianggap tidak relevan atau tidak diperlukan untuk analisis risiko serangan jantung.
+   - Alasan: Mengurangi jumlah fitur yang digunakan dalam pemodelan dapat meningkatkan efisiensi dan mencegah overfitting.
+
+5. **Membuat Kategori Untuk Umur dan BMI**:
+   - Proses: Membuat kategori untuk fitur "Age" (umur) dan "BMI" berdasarkan batasan tertentu.
+   - Alasan: Kategorisasi fitur-fitur ini dapat membantu dalam memahami distribusi dan memungkinkan pemodelan yang lebih baik berdasarkan grup umur dan BMI.
+
+6. **One-Hot Encoding dan Label Encoding**:
+   - Proses: Menerapkan one-hot encoding dan label encoding pada fitur-fitur kategorikal.
+   - Alasan: Model machine learning memerlukan data numerik. Proses encoding mengubah data kategorikal menjadi bentuk yang dapat diproses oleh algoritma.
+
+7. **Pemisahan Data Train dan Test**:
+   - Proses: Memisahkan dataset menjadi data pelatihan (train set) dan data pengujian (test set).
+   - Alasan: Pemisahan ini diperlukan untuk menguji performa model pada data yang belum pernah dilihat sebelumnya dan menghindari overfitting.
+
+8. **Standardisasi/Scaling Nilai Numerik**:
+   - Proses: Melakukan scaling atau standardisasi pada nilai-nilai numerik dalam dataset.
+   - Alasan: Scaling memastikan bahwa nilai-nilai numerik memiliki skala yang serupa, sehingga algoritma yang sensitif terhadap skala dapat beroperasi dengan baik.
 
 ## Modeling
 Pada tahap pemodelan, telah digunakan beberapa algoritma machine learning untuk membangun model prediksi risiko serangan jantung. Algoritma yang dipilih adalah sebagai berikut:
@@ -151,8 +208,9 @@ Hasil pemodelan menunjukkan bahwa model terbaik yang dipilih adalah **Logistic R
      - Memerlukan waktu komputasi yang tinggi untuk menghitung jarak antara titik data.
 
 **Pemilihan Model Terbaik:**
-
+ <img src="Images/model.png" alt="model" width="auto" height="auto"> <br>
 Model terbaik, yaitu **Logistic Regression**, dipilih berdasarkan akurasi tertinggi (0.6418) dan precision yang tinggi untuk kelas mayoritas ("No Heart Attack"). Model ini dapat mengidentifikasi individu yang tidak memiliki risiko serangan jantung dengan sangat baik. Meskipun recall untuk kelas "Heart Attack" rendah, model ini masih memberikan hasil yang baik dalam hal akurasi dan precision secara keseluruhan.
+
 
 ## Evaluation
 Model-model yang diuji termasuk **Random Forest**, **Logistic Regression**, **Decision Tree**, **Gradient Boosting**, dan **K-Nearest Neighbors**. Hasil menunjukkan bahwa masing-masing model memiliki kinerja yang berbeda. Sebagai contoh, model** Logistic Regression** memiliki akurasi tertinggi sekitar 0,6418, tetapi memiliki nilai recall yang rendah untuk kasus **Serangan Jantung**. Metrik evaluasi memberikan gambaran yang lengkap tentang kinerja model. Namun, pemilihan model terbaik akan bergantung pada prioritas yang berbeda, misalnya, apakah kita lebih peduli dengan presisi, recall, akurasi, atau bahkan semuanya. Akurasi keseluruhan model berada di sekitar 53% hingga 64%, yang berarti sekitar 53% hingga 64% dari semua kasus diprediksi dengan benar. Dengan demikian, hasil proyek dapat dinilai berdasarkan metrik evaluasi ini untuk menentukan model yang paling sesuai untuk memprediksi risiko serangan jantung.
