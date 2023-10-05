@@ -176,7 +176,7 @@ Proses pembagian dataset pada tahap data preparation adalah langkah penting dala
    - Dalam proyek ini, rasio 80:20 digunakan, yang berarti 80% dari dataset digunakan untuk melatih model dan 20% digunakan untuk menguji model. Rasio ini memberikan keseimbangan yang baik antara melatih model dengan cukup data dan menguji model pada data yang independen untuk mengukur kinerja yang sebenarnya.
 
    Proses pembagian dataset ini penting untuk menghindari overfitting, yaitu ketika model terlalu "menghafal" data pelatihan dan tidak dapat menggeneralisasi dengan baik pada data baru. 
-   Dengan membagi dataset menjadi data pelatihan dan pengujian, kita dapat mengukur kinerja model secara lebih objektif dan memastikan bahwa model mampu menghasilkan prediksi yang baik 
+   Dengan membagi dataset menjadi data pelatihan dan pengujian, dapat mengukur kinerja model secara lebih objektif dan memastikan bahwa model mampu menghasilkan prediksi yang baik 
    pada data yang belum pernah dilihat sebelumnya.
 
 8. **Standardisasi Nilai Numerik**:
@@ -261,12 +261,66 @@ Hasil pemodelan menunjukkan bahwa model terbaik yang dipilih adalah **Logistic R
      - Rentan terhadap pengaruh outlier.
      - Memerlukan waktu komputasi yang tinggi untuk menghitung jarak antara titik data.
 
-**Pemilihan Model Terbaik:**
-![model](https://github.com/Fallennnnnn/Heart-Attack-Prediction/assets/84832657/eff7b22a-d426-4e0d-936a-856e747b4508) <br>
+**Pemilihan Model Terbaik:** 
 Model terbaik, yaitu **Logistic Regression**, dipilih berdasarkan akurasi tertinggi (0.6418) dan precision yang tinggi untuk kelas mayoritas ("No Heart Attack"). Model ini dapat mengidentifikasi individu yang tidak memiliki risiko serangan jantung dengan sangat baik. Meskipun recall untuk kelas "Heart Attack" rendah, model ini masih memberikan hasil yang baik dalam hal akurasi dan precision secara keseluruhan.
 
 
 ## Evaluation
+|                   | precision | recall | f1-score | support |
+|-------------------|-----------|--------|----------|---------|
+| No Heart Attack   | 0.64      | 0.97   | 0.77     | 1125    |
+| Heart Attack      | 0.38      | 0.03   | 0.06     | 628     |
+| accuracy          |           |        | 0.63     | 1753    |
+| macro avg         | 0.51      | 0.50   | 0.42     | 1753    |
+| weighted avg      | 0.55      | 0.63   | 0.52     | 1753    |
+
+Random Forest Accuracy: 0.6349
+==================================================
+
+|                   | precision | recall | f1-score | support |
+|-------------------|-----------|--------|----------|---------|
+| No Heart Attack   | 0.64      | 1.00   | 0.78     | 1125    |
+| Heart Attack      | 1.00      | 0.00   | 0.00     | 628     |
+| accuracy          |           |        | 0.64     | 1753    |
+| macro avg         | 0.82      | 0.50   | 0.39     | 1753    |
+| weighted avg      | 0.77      | 0.64   | 0.50     | 1753    |
+
+Logistic Regression Accuracy: 0.6418
+==================================================
+
+|                   | precision | recall | f1-score | support |
+|-------------------|-----------|--------|----------|---------|
+| No Heart Attack   | 0.64      | 0.62   | 0.63     | 1125    |
+| Heart Attack      | 0.36      | 0.37   | 0.36     | 628     |
+| accuracy          |           |        | 0.53     | 1753    |
+| macro avg         | 0.50      | 0.50   | 0.50     | 1753    |
+| weighted avg      | 0.54      | 0.53   | 0.54     | 1753    |
+
+Decision Tree Accuracy: 0.5334
+==================================================
+
+|                   | precision | recall | f1-score | support |
+|-------------------|-----------|--------|----------|---------|
+| No Heart Attack   | 0.64      | 0.99   | 0.78     | 1125    |
+| Heart Attack      | 0.36      | 0.01   | 0.03     | 628     |
+| accuracy          |           |        | 0.64     | 1753    |
+| macro avg         | 0.50      | 0.50   | 0.40     | 1753    |
+| weighted avg      | 0.54      | 0.64   | 0.51     | 1753    |
+
+Gradient Boosting Accuracy: 0.6378
+==================================================
+
+|                   | precision | recall | f1-score | support |
+|-------------------|-----------|--------|----------|---------|
+| No Heart Attack   | 0.64      | 0.75   | 0.69     | 1125    |
+| Heart Attack      | 0.36      | 0.25   | 0.30     | 628     |
+| accuracy          |           |        | 0.57     | 1753    |
+| macro avg         | 0.50      | 0.50   | 0.49     | 1753    |
+| weighted avg      | 0.54      | 0.57   | 0.55     | 1753    |
+
+K-Nearest Neighbors Accuracy: 0.5705
+==================================================
+
 Berdasarkan hasil evaluasi kinerja model, dapat disimpulkan bahwa model-model yang diuji memiliki kinerja yang bervariasi. Misalnya, **Logistic Regression** memiliki akurasi tertinggi sekitar 0,6418, yang mengindikasikan kemampuannya dalam memprediksi kasus risiko serangan jantung. Namun, model ini memiliki nilai recall yang rendah untuk kasus **Serangan Jantung**, yang berarti kemampuannya dalam mengidentifikasi dengan benar kasus serangan jantung adalah yang paling rendah dibandingkan dengan model lainnya.
 
 Metrik evaluasi, seperti akurasi, presisi, recall, dan F1-Score, memberikan gambaran yang lengkap tentang kinerja model dari berbagai aspek. Namun, pemilihan model terbaik akan sangat tergantung pada prioritas yang berbeda. Misalnya, jika lebih memprioritaskan untuk mengidentifikasi dengan benar kasus serangan jantung (recall yang tinggi), maka mungkin akan memilih model lain yang memiliki recall yang lebih baik, meskipun akurasinya lebih rendah.
@@ -294,6 +348,7 @@ Recall mengukur sejauh mana model dapat mengidentifikasi semua kasus positif yan
 
 $$\text{F1-Score} = 2 \cdot \frac{\text{Presisi} \cdot \text{Recall}}{\text{Presisi} + \text{Recall}}$$
 F1-Score adalah metrik yang menggabungkan presisi dan recall. Ini memberikan gambaran tentang keseimbangan antara akurasi model dalam mengidentifikasi kasus positif dan kemampuannya dalam menghindari kesalahan positif.
+
 
 **Referensi**
 - [World Health Organization (WHO) - Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases)
