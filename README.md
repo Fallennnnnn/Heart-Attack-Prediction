@@ -352,8 +352,9 @@ F1-Score adalah metrik yang menggabungkan presisi dan recall. Ini memberikan gam
 
 **Referensi**
 - [World Health Organization (WHO) - Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases)
-- Arora, S., Kumar, A., & Garg, R. (2022, March 8). Risk factors for heart attack: A review. Journal of Cardiovascular Disease Research, 13(1), 1-10.
-- Deng, Y., Xu, J., Wang, Y., & Zhu, H. (2022, June 21). Risk factors for heart attack in China: A systematic review and meta-analysis. Journal of the American Heart Association,
-- Krishnan, S., & Bhatt, D. L. (2022, June 6). Risk factors for heart attack: A comprehensive review. Journal of the American College of Cardiology, 79(16), 2157-2172.
+- Brown JC, Gerhardt TE, Kwon E. Risk Factors for Coronary Artery Disease. [Updated 2023 Jan 23]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2023 Jan-
+- Zhiting, G., Jiaying, T., Haiying, H. et al. Cardiovascular disease risk prediction models in the Chinese population- a systematic review and meta-analysis. BMC Public Health 22, 1608   
+  (2022).
+- Adhikary D, Barman S, Ranjan R, Stone H. A Systematic Review of Major Cardiovascular Risk Factors: A Growing Global Health Concern. Cureus. 2022 Oct 10;14(10)
   
 **---Ini adalah bagian akhir laporan---**
